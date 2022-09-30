@@ -1,0 +1,196 @@
+    
+****КОМАНДИ З ОДНОГО ТЕРМІНАЛУ****
+
+    5  uname -a					***вивід інформації про систему, її версія, ядро та інші характеристики
+    6  sudo apt upgrade				***встановлення останніх оновлень системи
+    7  cat /etc/apt
+    8  cat /etc/apt/source.list		
+    9  cat /etc/apt/sources.list		***перегляд репозиторіїв
+   10  sudo apt-get install vim vim-gtk		***встановлення редактору тексту vim та vim-gtk
+   11  cd ~					***вихід на найперший рівень
+   12  cd До
+   13  cd Завантаження/				***перехід у папку завантажень 
+   14  ls					***перегляд файлів у директорії
+   15  man ls					***перегляд іструкції по ls
+   16  ls
+   17  ls -la					***перегляд інформації у папці у іншому вигляді
+   18  cd ~
+   19  cd Завантаження/
+   20  ls
+   21  cd ~
+   22  ps aux | grep -i ping			***вивід процесів з підсвіткою ping
+   23  kill 36561
+   24  kill 21832
+   25  kill 36537
+   26  kill 36520				***завершення процесу
+   27  ps aux | grep -i ping			
+   28  kill 36569
+   29  ps aux | grep -i ping
+   30  sudo kill -9 36569			***завершення процесу від прав адміна з найвищим 'примусово'
+   31  ps aux | grep -i ping
+   32  sudo killall vlc				***завершення всіх процесів з VLC
+   33  ps aux					***перелік всіх процесів в системі
+   34  ls -l
+   35  cd /bin
+   36  cd ~
+   37  cd /
+   38  ls -l
+   39  cd /bin
+   40  ls
+   41  echo $PATH				***вивід зміннох шляху
+   42  echo $USER				***вивід змінної шляху
+   43  cd /etc
+   44  cd ..
+   45  ls
+   46  cd lib
+   47  ls
+   48  cd ..
+   49  ls
+   50  cd dev
+   51  cd ..
+   52  dmesg					***вивід історії гарнітур(чомусь не вийшло в мене, і сказало, що не було доступу, хоча у вас на відео спрацювало)
+   53  sudo dmsg				
+   54  sudo dmseg
+   55  sudo dmesg				***перегляд історії гарнітур від адміна
+   56  dmesg			
+   57  sudo dmesg -c				***очищення історії гарнітур від адміна
+   58  sudo dmesg
+   59  dmesg
+   60  cd dev
+   61  dmesg
+   62  cd ..
+   63  cd dev
+   64  df
+   65  cd ..
+   66  cd home
+   67  cd ~
+   68  ls
+   69  ll					***перегляд конфігів
+   70  ls
+   71  cd /
+   72  ls mod
+   73  ls
+   74  lsmod					***перегляд завантажених модулів
+   75  cd ..
+   76  cd proc
+   77  ls
+   78  cat /proc/cpuinfo
+   79  echo 1 > /proc/sys/net/ipv4/ip_forward	***засетити щось в проки(без прав немає доступу)
+   80  sudo su					***вихід на рівень управління root
+   81  ifconfig					***перегляд ІР та мак-адрес(не пройшло, тому що відсутнє ПЗ даного застосунку)
+   82  cd ~
+   83  ifconfig
+   84  echo paul > 1.txt			***створення файлу з вказаним текстом у файлі
+   85  cat 1.txt
+   86  echo vasya > 1.txt
+   87  cat 1.txt
+   88  echo paul > 1.txt
+   89  echo vasya > 2.txt
+   90  diff 2.txt 1.txt				***порівняння вмісту двох файлів
+   91  history
+   92  lsmod
+   93  lspci					***перегляд списку шин
+   94  df					***перегляд інформації про диски
+   95  history					***історія всіх команд 
+
+
+
+****КОМАНДИ З ДРУГОГО ТЕРМІНАЛУ****
+   16  ls
+   17  ls -la
+   18  cd ~
+   19  cd Завантаження/
+   20  ls
+   21  cd ~
+   22  uname -a
+   23  sudo apt upgrade
+   24  cat /etc/apt/sources.list
+   25  sudo apt-get install vim-gtk
+   26  cd Завантаження/
+   27  ls
+   28  man ls
+   29  ls -la
+   30  cd ~
+   31  cd Завантаження/
+   32  ls
+   33  dpkg -i
+   34  dpkg -i skypeforlinux-64.deb		***завантаження скайпу(помилка, тому що відсутній доступ)
+   35  sudo dpkg -i skypeforlinux-64.deb 	***завантаження скайпу через головний доступ
+   36  cd ~
+   37  echo $PWD 'hi all here'			***звернення до команди через змінну $PWD та вивід необхідного тексту
+   38  touch hi.sh				***створення файлу у форматі sh
+   39  ls					
+   40  echo $PATH  'hi all here'		***звернення до команди через змінну $PATH та вивід шляху та необхідного тексту
+   41  vi ./hi.sh 				***відкриття вказаного файлу через текстовий редактор
+   42  ./hi.sh					***запуск файлу(помилка, тому що відсутній доступ)
+   43  ls -l					
+   44  vi ./hi.sh 				
+   45  ./hi.sh
+   46  chmod +x ./hi.sh				***додаємо права доступу виконання файлу 
+   47  ls			
+   48  chmod 777 ./hi.sh			***додаємо всі права для вказаного файлу
+   49  ./hi.sh					***запуск скрипта
+   50  ./hi.sh Ukraine				***запуск скрипта з вказаною перемінною
+   51  cp ./hi.sh Завантаження/			***копіювання файл до вказаною папки
+   52  cd Завантаження/
+   53  ді
+   54  ls
+   55  cd ~
+   56  cd Завантаження/
+   57  mv ./hi.sh ../				***переміщення файлу до вказаної директорії
+   58  cd~	
+   59  cd ~
+   60  ls
+   61  cd Завантаження/
+   62  cd ..
+   63  ls
+   64  cd Завантаження/
+   65  ls
+   66  cd ..
+   67  ls
+   68  rm ./hi.sh 				***видалення файлу
+   69  ls
+   70  touch paul1
+   71  ls -l
+   72  paul1
+   73  rm ./paul1
+   74  ls -l
+   75  cd /bin					
+   76  ls -l
+   77  cd ../..
+   78  cd ~
+   79  ls
+   80  tar cvf hipaul.tar Завантаження/		***створення архіву вказаної директорії
+   81  cat ./hi.sh				***перегляд файлу
+   82  tail -n 20 /var/log/syslog 		***вивід останніх 20 рядків syslog
+   83  less -n 20 /var/log/syslog 		***перегляд по сторінкам
+   84  cd ../..
+   85  ls
+   86  find -name dhcp .			/*
+   87  find -name dhcp ./			   неправильні варіанти вводу команди
+   88  find -name dhcp /
+   89  find -name / dhcp			*/
+   90  find . -name dhcp			***правильий запис пошуку у всій системі інформації та файлів з вказаним ключем 'dhcp'
+   91  find . -name *dhcp*			***більш глобальний пошук ніж в попередній команді
+   92  find . -name *dhcp* | grep -i		
+   93  find . -name *dhcp* | grep -i dhcp	***пошук з підсвіткою 'dhcp'
+   94  find . -name *dhcp* | grep -i etc	***пошук з підсвіткою 'etc'
+   95  ping google.com				***пінгування гугла
+   96  ping google.com&				***пінгування на задньому фоні без можливості звичайного виходу з пінгування
+   97  daet					
+   98  date					***timestemp
+   99  fg					***овернення з background
+  100  ping google.com&
+  101  ps
+  102  ps aux | grep-i
+  103  ping google.com&
+  104  sudo ping google.com&			***пінгування гугла від адміна
+  105  vlc					***запуск відеопрогравача
+  106  sudo apt install vls			/*
+  107  sudo apt install vlc				інсталяція VLC
+  108  apt --fix-broken install
+  109  sudo apt --fix-broken install
+  110  sudo apt install vlc			*/
+  111  vlc
+  112  cd /
+  113  history
